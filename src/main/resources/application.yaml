@@ -1,0 +1,35 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: share_study_rabbitmq
+#RabbitMQ Configuration
+  rabbitmq:
+    host: xxx.xxx.xxx.xxx
+    virtual-host: /
+    username: admin
+    password: admin123456
+    port: 25672
+    listener:
+      simple:
+        acknowledge-mode: manual
+#fabricgateway:
+#  certificatePath: src/main/resources/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
+#  privateKeyPath: src/main/resources/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/priv_sk
+#  tlsCertPath: src/main/resources/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+#  nettyChannelBuilder: xxx.xxx.xxx.xxx:7051
+#  overrideAuthority: peer0.org1.example.com
+#  chainCodeName: teacher-contract
+#  contractName: teacherContract
+#  channelName: teacherchannel
+#  mspId: Org1MSP
+fabricgateway:
+  certificatePath: /opt/data/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/Admin@org1.example.com-cert.pem
+  privateKeyPath: /opt/data/crypto-config/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/priv_sk
+  tlsCertPath: /opt/data/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+  nettyChannelBuilder: xxx.xxx.xxx.xxx:7051
+  overrideAuthority: peer0.org1.example.com
+  chainCodeName: teacher-contract
+  contractName: teacherContract
+  channelName: teacherchannel
+  mspId: Org1MSP
